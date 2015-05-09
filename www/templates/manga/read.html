@@ -2,8 +2,8 @@
   <ion-content class="padding">
     <ion-list>
         <ion-item ng-show="!imageManga">Loading Data</ion-item>
-        <ion-item ng-repeat="(key, value) in imageManga" ui-sref="app.detail({name : value.url})">
-            <center><img ng-src="{{value}}" alt=""></center>
+        <ion-item ng-repeat="(key, value) in imageManga">
+            <center><img ng-src="{{value.url}}" alt=""></center>
         </ion-item>
     </ion-list>
   </ion-content>

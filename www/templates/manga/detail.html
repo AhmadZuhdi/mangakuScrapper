@@ -6,7 +6,7 @@
     <hr>
     <ion-list>
         <ion-item ng-show="!detailManga">Loading Chapter(s)</ion-item>
-        <ion-item ng-repeat="(key, value) in detailManga.chapters" ui-sref="app.read({rName : value.url})">
+        <ion-item ng-repeat="(key, value) in detailManga.chapters" ui-sref="app.read({rName : value.manga, chapter : value.url})">
             {{value.name}}
         </ion-item>
     </ion-list>

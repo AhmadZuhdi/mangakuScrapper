@@ -2,7 +2,7 @@
 * @Author: ahmadzuhdi
 * @Date:   2015-05-09 16:56:17
 * @Last Modified by:   ahmadzuhdi
-* @Last Modified time: 2015-05-09 21:55:13
+* @Last Modified time: 2015-05-09 22:41:30
 */
 
 'use strict';
@@ -60,7 +60,7 @@
 
         $scope.read = function() {
 
-            serviceManga.getImages($stateParams.rName, function(err, result) {
+            serviceManga.getImages(`${$stateParams.rName}/${$stateParams.chapter}`, function(err, result) {
 
                 if(err) {
 

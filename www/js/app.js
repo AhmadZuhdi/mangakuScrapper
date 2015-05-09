@@ -55,7 +55,7 @@ angular.module('app', ['ionic'])
   })
 
   .state('app.read', {
-    url: 'read/manga/:rName',
+    url: 'read/manga/:rName/:chapter',
     templateUrl: 'templates/manga/read.html',
     controller: 'app.manga.list'
   })
