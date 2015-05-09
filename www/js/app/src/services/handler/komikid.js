@@ -2,7 +2,7 @@
 * @Author: ahmadzuhdi
 * @Date:   2015-05-09 22:45:12
 * @Last Modified by:   ahmadzuhdi
-* @Last Modified time: 2015-05-09 23:27:26
+* @Last Modified time: 2015-05-09 23:47:31
 */
 
 'use strict';
@@ -181,6 +181,8 @@
 
                         while(loop) {
 
+                            let o = i + 1
+
                             $http.get(`${priv.setting.source}${url}/${(i < 10) ? '0' + i : i}`)
                                 .success(function (data, status) {
 
@@ -191,6 +193,8 @@
                                         let e = $(_e)
 
                                         images.push({
+
+                                            order : o,
 
                                             url : e.attr('src')
 

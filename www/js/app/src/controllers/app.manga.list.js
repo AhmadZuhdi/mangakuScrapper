@@ -2,7 +2,7 @@
 * @Author: ahmadzuhdi
 * @Date:   2015-05-09 16:56:17
 * @Last Modified by:   ahmadzuhdi
-* @Last Modified time: 2015-05-09 22:41:30
+* @Last Modified time: 2015-05-09 23:49:43
 */
 
 'use strict';
@@ -11,7 +11,7 @@
 
     var app = angular.module('app')
 
-    app.controller('app.manga.list', ['$scope', 'manga', '$stateParams', function($scope, serviceManga, $stateParams){
+    app.controller('app.manga.list', ['$scope', 'manga', '$stateParams', '$filter', function($scope, serviceManga, $stateParams, $filter){
 
         $scope.refresh = function() {
 
@@ -70,7 +70,7 @@
 
                 }
 
-                $scope.imageManga = result
+                $scope.imageManga = $filter('orderBy')(result, 'order')
 
             })
 
