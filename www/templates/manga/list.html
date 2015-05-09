@@ -1,5 +1,11 @@
 <ion-view view-title="Manga List">
   <ion-content class="padding">
-
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="refresh()"></ion-refresher>
+    <ion-list>
+        <ion-item ng-show="!mangas">Loading Data</ion-item>
+        <ion-item ng-repeat="(key, value) in mangas" ui-sref="app.detail({name : value.url})">
+            {{key+1}}. {{value.name}}
+        </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

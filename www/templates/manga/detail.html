@@ -1,0 +1,14 @@
+<ion-view view-title="{{detailManga.name}}">
+  <ion-content class="padding">
+
+    <div ng-bind-html="detailManga.detail"></div>
+
+    <hr>
+    <ion-list>
+        <ion-item ng-show="!detailManga">Loading Chapter(s)</ion-item>
+        <ion-item ng-repeat="(key, value) in detailManga.chapters" ui-sref="app.read({rName : value.url})">
+            {{value.name}}
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

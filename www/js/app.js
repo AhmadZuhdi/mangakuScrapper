@@ -41,11 +41,23 @@ angular.module('app', ['ionic'])
   .state('app.manga', {
     url: 'manga',
     views: {
-      'tab-manga': {
+      '': {
         templateUrl: 'templates/manga/list.html',
         controller: 'app.manga.list'
       }
     }
+  })
+
+  .state('app.detail', {
+    url: 'manga/:name',
+    templateUrl: 'templates/manga/detail.html',
+    controller: 'app.manga.list'
+  })
+
+  .state('app.read', {
+    url: 'read/manga/:rName',
+    templateUrl: 'templates/manga/read.html',
+    controller: 'app.manga.list'
   })
 
   .state('app.chats', {
